@@ -11,7 +11,7 @@ const App =() => {
 
     return (
     <BrowserRouter>
-    <Container /* className={"toggle" + (isShowing ? "On" : "Off")} */>
+    <Container>
         <NavBar/>
         <Switch>
          <Route  exact path= "/"  component={Home} />

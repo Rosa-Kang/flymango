@@ -1,15 +1,18 @@
-# fly.toml app configuration file generated for flymangoo on 2023-08-27T12:25:24-07:00
+# fly.toml app configuration file generated for small-silence-4346 on 2023-08-27T14:31:44-07:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "flymangoo"
+app = "small-silence-4346"
 primary_region = "sea"
 
 [build]
 
+[env]
+  PORT = "8080"
+
 [http_service]
-  internal_port = 3000
+  internal_port = 8080
   force_https = true
   auto_stop_machines = true
   auto_start_machines = true
