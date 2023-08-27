@@ -1,0 +1,42 @@
+@media only screen and (min-width: 700px) {
+    .MuiAppBar-root {
+        flex-direction: row !important;
+    }
+    .makeStyles-hero-36 , .makeStyles-hero-13 {
+        flex-direction:  row;
+        margin: 0;
+        justify-content: space-evenly;
+
+    }
+    #editPaper {
+        width: 50%;
+    }
+    #question {
+        font-size: 2vw;
+    }
+    #form {
+        padding: 3em;
+    }
+    #form-div {
+        padding: 3em;
+        left: 50%;
+        width: 40% !important;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    #hero {
+       flex-direction: row !important;
+       margin: 6% auto;
+    }
+    #question {
+        font-size: 2.4vw !important;
+    }
+    #editPaper {
+        width: 40%;
+        padding: 3em;
+    }
+    #form-div {
+        width: 36% !important;
+    }
+}
