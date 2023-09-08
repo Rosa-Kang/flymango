@@ -10,15 +10,15 @@ import Auth from './components/Auth/Auth';
 const App =() => {
 
     return (
-    <BrowserRouter>
-    <Container>
-        <NavBar/>
-        <Switch>
-         <Route  exact path= "/"  component={Home} />
-         <Route  path= "/auth" component={Auth} exact/>
-        </Switch>
-     </Container>
-    </BrowserRouter>
+        <BrowserRouter>
+            <Container>
+                <NavBar />
+                <Switch>
+                    <Route exact path="/" component={Home} />
+                    <Route path="/auth" component={Auth} exact />
+                </Switch>
+            </Container>
+        </BrowserRouter>
     );
 };
 

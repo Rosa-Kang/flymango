@@ -11,9 +11,6 @@ const EditForm =({ post, currentId, setEditPost, setEdit, editPost})=> {
    const dispatch = useDispatch();
    const classes = useStyles();
    const user = JSON.parse(localStorage.getItem('profile'));
-  //  const postID = post._id;
-  //  const userID = user.result._id;
-  //  console.log(post, userID);
    
    const ctrlEditPost =()=> {
        if (editPost) {

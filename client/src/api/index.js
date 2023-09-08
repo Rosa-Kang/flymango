@@ -1,6 +1,6 @@
 import axios from 'axios'; 
 
-const API = axios.create({baseURL : 'https://small-silence-4346.fly.dev'});
+const API = axios.create({ baseURL: 'https://small-silence-4346.fly.dev' });
 
 
 API.interceptors.request.use((req) => {

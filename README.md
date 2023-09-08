@@ -2,6 +2,7 @@
 
 #### Flymango is a web application where users can share their good memories from their trips and search for the next destination.
 
+#### In this app, I have implemented the folder effective folder structure as well as the Redux to handle/sore the state of the data.
 ---
 
 <details open="open"><summary><h2 style="display: inline-block">Table of Contents</h2></summary>
@@ -27,6 +28,7 @@
 - Authentication & Login with JWT (Json Web Token)
 - Creating Realtime Web App with CRUD function
 - App with Redux Framework with React Hooks
+- Server side used a middleware such as 'controller' to handle all the logics related to the routes.
 
 <!--USE TECH-->
 
@@ -51,7 +53,7 @@ Client : yarn add jwt-decode react-google-login / Server: yarn add bcrypt jsonwe
 . npm i body-parser : to POST request
 . npm i cors : Cross Origin Resource Sharing : a middleware to Connect/ Express
 . npm i express : a framework for creating the Routing of our application
-. npm i mongoose : to create models of our POST
+. npm i mongoose : to create models of our POST Schema
 . npm i nodemon : auto reset the server
 . npm i bcryptjs jsonwebtoken
 
