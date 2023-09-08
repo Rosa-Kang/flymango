@@ -45,66 +45,37 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar
-      className={classes.appBar}
-      position="static"
-      color="inherit"
-      maxwidth="xs"
-    >
-      <Link to="/" className={classes.left}>
-        <img className={classes.image} src={logo} alt="memories" height="60" />
-        <Typography className={classes.logo}>flymango</Typography>
-      </Link>
-      <Toolbar className={classes.right}>
-        {user ? (
-          <div className={classes.profile}>
-            <Avatar
-              className={classes.purple}
-              alt={user.result.name}
-              src={user.result.imageUrl}
-            >
-              {user.result.name.charAt(0)}
-            </Avatar>
-            <Typography className={classes.userName} variant="h6">
-              Hi! {shorten}
-            </Typography>
-            <Button
-              onClick={logout}
-              variant="contained"
-              className={classes.rightBtn}
-            >
-              Logout
-            </Button>
-          </div>
-        ) : (
-          <Link style={{ textDecoration: "none" }} to="/auth">
-            <Button
-              className={classes.rightBtn}
-              variant="contained"
-              component="span"
-            >
-              Sign in
-            </Button>
+      <AppBar className={classes.appBar} position="static" color="inherit" maxwidth="xs">
+          <Link to="/" className={classes.left}>
+              <img className={classes.image} src={logo} alt="memories" height="60" />
+              <Typography className={classes.logo}>flymango</Typography>
           </Link>
-        )}
-        <Button
-          onClick={ctrlAddPost}
-          className={classes.rightBtn}
-          variant="contained"
-          color="primary"
-          component="span"
-        >
-          Add post
-        </Button>
-      </Toolbar>
-      {addPost && (
-        <Form
-          setAddPost={setAddPost}
-          currentId={currentId}
-          setCurrentId={setCurrentId}
-        />
-      )}
-    </AppBar>
+          <Toolbar className={classes.right}>
+              {user ? (
+                  <div className={classes.profile}>
+                      <Avatar className={classes.purple} alt={user.result.name} src={user.result.imageUrl}>
+                          {user.result.name.charAt(0)}
+                      </Avatar>
+                      <Typography className={classes.userName} variant="h6">
+                          Hi! {shorten}
+                      </Typography>
+                      <Button onClick={logout} variant="contained" className={classes.rightBtn}>
+                          Logout
+                      </Button>
+                  </div>
+              ) : (
+                  <Link style={{ textDecoration: 'none' }} to="/auth">
+                      <Button className={classes.rightBtn} variant="contained" color="primary" component="span">
+                          Sign in
+                      </Button>
+                  </Link>
+              )}
+              <Button onClick={ctrlAddPost} className={classes.rightBtn} variant="contained" color="primary" component="span">
+                  Add post
+              </Button>
+          </Toolbar>
+          {addPost && <Form setAddPost={setAddPost} currentId={currentId} setCurrentId={setCurrentId} />}
+      </AppBar>
   );
 };
 

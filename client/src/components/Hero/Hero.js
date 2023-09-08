@@ -37,64 +37,51 @@ const Hero = () => {
   };
 
   return (
-    <>
-      {!visible ? (
-        <Container className={classes.hero} id="hero">
-          <Grid className={classes.heroLeft}>
-            <Typography className={classes.question} id="question">
-              Where do you want to go?
-            </Typography>
-            <Button
-              onClick={movieSwitch}
-              className={classes.rightBtn}
-              variant="contained"
-              component="span"
-            >
-              Let me pick one for you!
-            </Button>
-          </Grid>
-          <Grid>
-            <img
-              className={classes.plane}
-              alt="plane"
-              src={plane ? plane2 : plane1}
-            />
-          </Grid>
-        </Container>
-      ) : (
-        <Card className={classes.root} onClick={turnOff}>
-          <CardHeader
-            avatar={
-              <Avatar aria-label="recipe" className={classes.avatar}>
-                R
-              </Avatar>
-            }
-            action={
-              <IconButton aria-label="settings">
-                <MoreVertIcon />
-              </IconButton>
-            }
-            title={pickedCard.title}
-            subheader={pickedCard.createdAt}
-          />
-          <CardMedia
-            className={classes.media}
-            image={pickedCard.selectedFile}
-            title={pickedCard.title}
-          />
-          <CardContent>
-            <Typography variant="body2" color="textSecondary" component="p">
-              {pickedCard.message}
-            </Typography>
-          </CardContent>
-          <CardActions disableSpacing>
-            <IconButton aria-label="add to favorites">
-              <ReplyIcon />
-            </IconButton>
-          </CardActions>
-        </Card>
-      )}
-    </>
+      <>
+          {!visible ? (
+              <Container className={classes.hero} id="hero">
+                  <Grid className={classes.heroLeft}>
+                      <Typography className={classes.question} id="question">
+                          Where do you want to go?
+                      </Typography>
+                      <Button onClick={movieSwitch} className={classes.rightBtn} variant="contained" color="primary" component="span">
+                          Let me pick one for you!
+                      </Button>
+                  </Grid>
+                  <Grid>
+                      <img className={classes.plane} alt="plane" src={plane ? plane2 : plane1} />
+                  </Grid>
+              </Container>
+          ) : (
+              <Card className={classes.root} onClick={turnOff}>
+                  <CardHeader
+                      avatar={
+                          <Avatar aria-label="recipe" className={classes.avatar}>
+                              R
+                          </Avatar>
+                      }
+                      action={
+                          <IconButton aria-label="settings">
+                              <MoreVertIcon />
+                          </IconButton>
+                      }
+                      title={pickedCard.title}
+                      subheader={pickedCard.createdAt}
+                  />
+                  <CardMedia className={classes.media} image={pickedCard.selectedFile} title={pickedCard.title} />
+                  <CardContent>
+                      <Typography variant="body2" color="textSecondary" component="p">
+                          {pickedCard.message}
+                      </Typography>
+                  </CardContent>
+                  <CardActions disableSpacing>
+                      <IconButton aria-label="add to favorites">
+                          <ReplyIcon />
+                      </IconButton>
+                  </CardActions>
+              </Card>
+          )}
+      </>
   );
 };
 
